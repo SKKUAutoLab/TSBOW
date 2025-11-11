@@ -2,380 +2,289 @@
 <html lang="en">
 
 <head>
-  <title>Compact 3D Gaussian Splatting</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-  <style>
-    html,
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    }
+    <title>Compact 3D Gaussian Splatting</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        }
 
-    < !-- .cite {
-      background: #f0f0f0;
-      padding: 10px;
-      font-size: 18px
-    }
+        <!--
+        .cite {
+            background: #f0f0f0;
+            padding: 10px;
+            font-size: 18px
+        }
 
-    -->.cite {
-      padding: 0px;
-      background: #ffffff;
-      font-size: 18px
-    }
+        -->
+        .cite {
+            padding: 0px;
+            background: #ffffff;
+            font-size: 18px
+        }
 
-    .card {
-      border: 1px solid #ccc
-    }
+        .card {
+            border: 1px solid #ccc
+        }
 
-    img {
-      margin-bottom: -6px;
-    }
+        img {
+            margin-bottom: -6px;
+        }
 
-    p {
-      font-size: 18px;
-    }
+        p {
+            font-size: 18px;
+        }
 
-    a {
-      text-decoration: none;
-      color: #2196F3;
-    }
+        a {
+            text-decoration: none;
+            color: #2196F3;
+        }
 
-    .bibtexsection {
-      width: 100%;
-      height: 20em;
-      font-family: "Courier", monospace;
-      /* font-size: 1vw; */
-      white-space: pre;
-      background-color: #f4f4f4;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-    }
+        .bibtexsection {
+            width: 100%;
+            height: 20em;
+            font-family: "Courier", monospace;
+            /* font-size: 1vw; */
+            white-space: pre;
+            background-color: #f4f4f4;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
 
-    .layered-paper-big {
-      /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-      box-shadow:
-        0px 0px 1px 1px rgba(0, 0, 0, 0.35),
-        /* The top layer shadow */
-        5px 5px 0 0px #fff,
-        /* The second layer */
-        5px 5px 1px 1px rgba(0, 0, 0, 0.35),
-        /* The second layer shadow */
-        10px 10px 0 0px #fff,
-        /* The third layer */
-        10px 10px 1px 1px rgba(0, 0, 0, 0.35),
-        /* The third layer shadow */
-        15px 15px 0 0px #fff,
-        /* The fourth layer */
-        15px 15px 1px 1px rgba(0, 0, 0, 0.35),
-        /* The fourth layer shadow */
-        20px 20px 0 0px #fff,
-        /* The fifth layer */
-        20px 20px 1px 1px rgba(0, 0, 0, 0.35),
-        /* The fifth layer shadow */
-        25px 25px 0 0px #fff,
-        /* The fifth layer */
-        25px 25px 1px 1px rgba(0, 0, 0, 0.35);
-      /* The fifth layer shadow */
-      margin-left: 10px;
-      margin-right: 60px;
-    }
+        .layered-paper-big {
+            /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+            box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The top layer shadow */ 5px 5px 0 0px #fff,
+                /* The second layer */ 5px 5px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The second layer shadow */ 10px 10px 0 0px #fff,
+                /* The third layer */ 10px 10px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The third layer shadow */ 15px 15px 0 0px #fff,
+                /* The fourth layer */ 15px 15px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The fourth layer shadow */ 20px 20px 0 0px #fff,
+                /* The fifth layer */ 20px 20px 1px 1px rgba(0, 0, 0, 0.35),
+                /* The fifth layer shadow */ 25px 25px 0 0px #fff,
+                /* The fifth layer */ 25px 25px 1px 1px rgba(0, 0, 0, 0.35);
+            /* The fifth layer shadow */
+            margin-left: 10px;
+            margin-right: 60px;
+        }
 
-    table {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      border-collapse: collapse;
-    }
+        table {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+        }
 
-    table> :is(thead, tbody)>tr> :is(th, td) {
-      padding: 3px;
-      text-align: center;
-    }
+        table > :is(thead, tbody) > tr > :is(th, td) {
+            padding: 3px;
+            text-align: center;
+        }
 
-    table>thead>tr> :is(th, td) {
-      border-top: 2px solid;
-      border-bottom: 1px solid;
-    }
+        table > thead > tr > :is(th, td) {
+            border-top: 2px solid;
+            border-bottom: 1px solid;
+        }
 
-    table>tbody>tr:last-child> :is(th, td) {
-      border-bottom: 2px solid;
-    }
+        table > tbody > tr:last-child > :is(th, td) {
+            border-bottom: 2px solid;
+        }
 
-    table>tbody {
-      border-top: 2px solid;
-      border-bottom: 1px solid;
-    }
-  </style>
+        table > tbody {
+            border-top: 2px solid;
+            border-bottom: 1px solid;
+        }
+    </style>
 </head>
 
 <body class="w3-white">
-  <!-- Page Container -->
-  <div class="w3-content w3-margin-top w3-margin-bottom" style="max-width:960px;">
+<!-- Page Container -->
+<div class="w3-content w3-margin-top w3-margin-bottom" style="max-width:960px;">
 
     <!-- The Grid -->
     <div class="w3-row-padding">
 
-      <!-- paper container -->
-      <div class="w3-display-container w3-row w3-white w3-margin-bottom">
-        <!-- <div class="w3-center">
-          <h1>Compact 3D Gaussian Splatting for Static and Dynamic Radiance Fields</h1> -->
+        <!-- paper container -->
+        <div class="w3-display-container w3-row w3-white w3-margin-bottom">
+            <!-- <div class="w3-center">
+              <h1>Compact 3D Gaussian Splatting for Static and Dynamic Radiance Fields</h1> -->
 
-          <!-- <div class="w3-center">
-            <h4><b>Preprint</b> [<a href="https://github.com/maincold2/Dynamic_C3DGS/"><b>Code</b></a>] [<a href="https://arxiv.org/abs/2408.03822"><b>Paper</b></a>]</h4>
-            </div> -->
-            <div class="w3-center">
-              <h1>Compact 3D Gaussian Representation for Radiance Field</h1>
-
-              <div class="w3-center">
-                <h4><b>CVPR 2024 (Highlight)</b></h4>
-                <h4>[<a href="https://arxiv.org/abs/2311.13681"><b>Paper</b></a>] [<a
-                      href="https://arxiv.org/abs/2408.03822"><b>Extended Paper</b></a>] [<a href="https://github.com/maincold2/Compact-3DGS"><b>Code for static scenes</b></a>] [<a
-                      href="https://github.com/maincold2/Dynamic_C3DGS/"><b>Code for dynamic scenes</b></a>]</h4>
-                </div>
-                <h5><a href="https://maincold2.github.io">Joo Chan Lee</a><sup>1</sup>, <a
-                    href="https://daniel03c1.github.io">Daniel Rho</a><sup>2</sup>, <a
-                    href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=VLzxTrAAAAAJ">Xiangyu
-                    Sun</a><sup>1</sup>, <a href="https://iris.skku.edu">Jong Hwan Ko</a><sup>1</sup>, and <a
-                    href="https://silverbottlep.github.io">Eunbyung Park</a><sup>1</sup></h5>
-                <h5><sup>1</sup>Sungkyunkwan University, <sup>2</sup>KT; UNC-Chapel Hill</h5>
-              </div>
-
-              <hr>
-              <p align="justify">
-                [Update (Aug. 2024)] We have extended the compact 3D Gaussian splatting for dynamic scene representation.
-              </p>
-              <div class="w3-center">
-                <!-- <h2>Videos</h2> -->
-                <div style="width: 48.4%; display: inline-block;">
-                  <video controls style="width:100%" autoplay loop playsinline muted>
-                    <source src="videos/movingdemo_flame_salmon.mp4" type="video/mp4">
-                    Sorry, your browser doesn't support embedded videos.
-                  </video>
-                </div>
-                <div style="width: 48.4%; display: inline-block;">
-                  <video controls style="width:100%" autoplay loop playsinline muted>
-                    <source src="videos/movingdemo_train.mp4" type="video/mp4">
-                    Sorry, your browser doesn't support embedded videos.
-                  </video>
-                </div>
-              </div>
-              <hr>
-              <div class="w3-center">
-                <h2>Architecture for Dynamic Scenes</h2>
-              </div>
-              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                <embed src="images/fig_dyn.png" style="width:100%">
-
-              </div>
-              <!-- <div class="w3-center">
-                    <h2>Abstract</h2>
-                </div> -->
-              <p align="justify">
-                We broadens the scope of the compact 3D Gaussian representation to include dynamic scenes with significant enhancements: 1) We successfully extend
-                the learnable masking approach for Gaussians moving over time, demonstrating its wide applicability.
-                For static scenes, several methods have attempted to estimate and remove
-                non-essential Gaussians after training, yielding promising results.
-                However, removing non-essential Gaussians after training has been more challenging in dynamic scenes, as
-                it requires measuring the importance of each Gaussian over the entire duration.
-                In contrast, our proposed masking strategy simplifies the process by eliminating such complexities,
-                learning the actual rendering impact of each Gaussian across all timestamps during training iterations
-                through gradient descent.
-                2) To compactly represent the motions of Gaussians, we propose learning representative temporal
-                trajectories by applying the codebook-based approach to temporal attributes. We successfully represent
-                temporal attributes parameter-efficiently and validate that other compact representations for geometry
-                and color are applicable for dynamic scenes as well as for static scenes.
-                3) Extensive experiments and analysis demonstrate the effectiveness of our approach in dynamic settings.
-                We achieve more than a tenfold increase in parametric efficiency compared to STG, the state-of-the-art
-                method for dynamic scene representation, while maintaining comparable performance.
-              </p>
-              <hr>
-
-              <div class="w3-center">
-                <!-- <h2>Videos</h2> -->
-                <div style="width: 48%; display: inline-block;">
-                  <video controls style="width:100%" autoplay loop playsinline muted>
-                    <source src="videos/bicycle_pp.mp4" type="video/mp4">
-                    Sorry, your browser doesn't support embedded videos.
-                  </video>
-                </div>
-                <div style="width: 48.4%; display: inline-block;">
-                  <video controls style="width:100%" autoplay loop playsinline muted>
-                    <source src="videos/drjohnson_pp.mp4" type="video/mp4">
-                    Sorry, your browser doesn't support embedded videos.
-                  </video>
-                </div>
-              </div>
-
-
-              <hr>
-              <!-- <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                <embed src="images/fig_demo.jpg" style="width:100%">
-
-              </div>
-
-              <hr>
-              <div class="w3-center">
-                <h2>Architecture Overview</h2> -->
-              </div>
-              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                <embed src="images/fig_arch.jpg" style="width:100%">
-
-              </div>
-              <!-- <div class="w3-center">
-                    <h2>Abstract</h2>
-                </div> -->
-              <p align="justify">
-                3D Gaussian splatting (3DGS) has recently emerged as an alternative representation that leverages a 3D
-                Gaussisan-based representation and adopts the rasterization pipeline to render the images rather than
-                volumetric rendering, achieving very fast rendering speed and promising image quality.
-                However, a significant drawback arises as 3DGS entails a substantial number of 3D Gaussians to maintain
-                the high fidelity of the rendered images, which requires a large amount of memory and storage.
-                To address this critical issue, we place a specific emphasis on two key objectives: reducing the number
-                of Gaussian points without sacrificing performance and compressing the Gaussian attributes, such as
-                view-dependent color and covariance.
-                To this end, we propose a learnable mask strategy that significantly reduces the number of Gaussians
-                while preserving high performance. In addition, we propose a compact but effective representation of
-                view-dependent color by employing a grid-based neural field rather than relying on spherical harmonics.
-                Finally, we learn codebooks to compactly represent the geometric attributes of Gaussian by vector
-                quantization.
-                With model compression techniques such as quantization and entropy coding, we consistently show over 25x
-                reduced storage and enhanced rendering speed, while maintaining the quality of the scene representation,
-                compared to 3DGS.
-                Our work provides a comprehensive framework for 3D scene representation, achieving high performance,
-                fast training, compactness, and real-time rendering.
-              </p>
-
-              <hr>
-
-<!-- 
-              <div class="w3-center">
-                <h2>The effect of masking</h2>
-                <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                  <embed src="images/fig_mask.jpg" style="width:45%">
-                </div>
-                <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                  <embed src="images/fig_vis_mask.jpg" style="width:100%">
-                </div>
-                <p>Masking can significantly reduce the number of Gaussians while retaining high quality.</p>
-              </div>
-
-              <hr>
-              <div class="w3-center">
-                <h2>The detailed process of R-VQ</h2>
-              </div>
-              <div class="w3-display-container w3-row w3-white w3-margin-bottom">
-                <embed src="images/fig_rvq.jpg" style="width:100%">
-                <p align="justify">In the first stage, the scale and rotation vectors are compared to codes in each
-                  codebook, with the closest code identified as the result. In the next stage, the residual between the
-                  original vector and the first stage's result is compared with another codebook. This process is
-                  repeated up to the final stage.</p>
-              </div>
-              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                <embed src="images/fig_vis_rvq.jpg" style="width:50%">
-                <p align="justify">This reduces the storage requirements by approximately 30% while maintaining the
-                  quality of reconstruction, training time, and rendering speed.</p>
+            <!-- <div class="w3-center">
+              <h4><b>Preprint</b> [<a href="https://github.com/maincold2/Dynamic_C3DGS/"><b>Code</b></a>] [<a href="https://arxiv.org/abs/2408.03822"><b>Paper</b></a>]</h4>
               </div> -->
+            <div class="w3-center">
+                <h1>TSBOW – Traffic Surveillance Benchmark for Occluded Vehicles Under VariousWeather Conditions</h1>
 
-              <div class="w3-center">
-                <h2>Results</h2>
-                <p align="justify">
-                  In addition to the end-to-end trained models (Ours), we implemented straightforward post-processing techniques
-                  on the model attributes, a variant we denote as Ours+PP. These post-processing steps include:
-                  1) Applying 8-bit min-max quantization to hash grid parameters and scalar attributes. 2) Pruning hash grid
-                  parameters with values below 0.1.
-                  3) Sorting Gaussians in Morton order.
-                  4) Applying Huffman encoding on the 8-bit quantized values (hash parameters and scalar attributes) and R-VQ indices, and compressing the results using DEFLATE
-              </div>
-              <h3>Static scenes</h3>
-              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                <embed src="images/fig_qual_s.png" style="width:100%">
-              </div>
-
-              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                <embed src="images/tab1.png" style="width:98%">
-              </div>
-
-              <div class="w3-center">
-                <!-- <h2>Videos</h2> -->
-                <div style="width: 49.5%; display: inline-block;">
-                  <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                    <embed src="images/tab2.png" style="width:95%">
-                  </div>
+                <div class="w3-center">
+                    <h4><b>AAAI 2026 (Poster)</b></h4>
+                    <h4>[<a href="."><b>Paper</b></a>] [<a
+                            href="."><b>Huggingface Dataset</b></a>] [<a
+                            href="."><b>Github</b></a>]</h4>
                 </div>
-                <div style="width: 49.5%; display: inline-block;">
-                  <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                    <embed src="images/tab3.png" style="width:95%">
-                  </div>
-                </div>
-              </div>
-
-              <h3>Dynamic scenes</h3>
-
-              <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                <embed src="images/fig_qual_d.png" style="width:100%">
-              </div>
-
-              <div class="w3-center">
-                <!-- <h2>Videos</h2> -->
-                <div style="width: 49.5%; display: inline-block;">
-                  <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                    <embed src="images/tab4.png" style="width:95%">
-                  </div>
-                </div>
-                <div style="width: 49.5%; display: inline-block;">
-                  <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                    <embed src="images/tab5.png" style="width:95%">
-                  </div>
-                </div>
-              </div>
-
-
-</div>
-
-<hr>
-<div class="w3-center">
-<h2>Bibtex</h2>
-</div>
-<textarea class="bibtexsection" readonly>
-@article{Lee_2024_C3DGS,
-  title={Compact 3D Gaussian Splatting for Static and Dynamic Radiance Fields},
-  author={Lee, Joo Chan and Rho, Daniel and Sun, Xiangyu and Ko, Jong Hwan and Park, Eunbyung},
-  journal={arXiv preprint arXiv:2408.03822},
-  year={2024}
-}
-@InProceedings{Lee_2024_CVPR,
-  author    = {Lee, Joo Chan and Rho, Daniel and Sun, Xiangyu and Ko, Jong Hwan and Park, Eunbyung},
-  title     = {Compact 3D Gaussian Representation for Radiance Field},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year      = {2024},
-  pages     = {21719-21728}
-}</textarea>
+                <h5>Ngoc Doan-Minh Huynh<sup>1</sup> Duong Nguyen-Ngoc Tran<sup>1</sup> Long Hoang Pham<sup>1</sup>
+                    Tai Huu-Phuong Tran<sup>1</sup> Huy-Hung Nguyen<sup>1</sup> Trinh Le Ba Khanh<sup>1</sup> Chi Dai Tran<sup>1</sup>
+                    Duong Khac Vu<sup>1</sup> Son Hong Phan<sup>1</sup> Quoc Pham-Nam Ho<sup>1</sup> Hyung-Min Jeon<sup>1</sup> Hyung-Joon Jeon<sup>1</sup> Jae Wook Jeon<sup>1</sup></h5>
+                <h5><sup>1</sup>Automation Lab, Sungkyunkwan University<sup></h5>
+            </div>
 
             <hr>
             <div class="w3-center">
-              <p class="text-justify">
-                We used the project page of <a href="https://daniel03c1.github.io/masked_wavelet_nerf/">Masked Wavelet
-                  NeRF</a> as a template.
-              </p>
+                <!-- <h2>Videos</h2> -->
+                <div style="width: 100%; display: inline-block;">
+                    <video controls style="width:100%" autoplay loop playsinline muted>
+                        <source src="videos/road_intersection_conversion.mp4" type="video/mp4">
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
+                </div>
             </div>
-          </div>
-          <!-- end paper container -->
+            <hr>
+            <div class="w3-center">
+                <h2>Scenes from the TSBOW dataset</h2>
+            </div>
+            <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                <embed src="images/Figure_All_Scenes.png" style="width:100%">
 
-        </div><!-- End Grid -->
-      </div><!-- End Page Container -->
+            </div>
+            <!-- <div class="w3-center">
+                  <h2>Abstract</h2>
+              </div> -->
+            <p align="justify">
+                Global warming has intensified the frequency and severity of extreme weather events, which degrade CCTV signal and video quality while disrupting traffic flow, thereby increasing traffic accident rates. Existing datasets, often limited to light haze, rain, and snow, fail to capture extreme weather conditions. To address this gap, this study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive dataset designed to enhance occluded vehicle detection across diverse annual weather scenarios. Comprising over 32 hours of real-world traffic data from densely populated urban areas, TSBOW includes more than 48,000 manually annotated bounding boxes and 3.2 million semi-labeled boxes, spanning eight traffic participant classes, ranging from large vehicles to micromobility devices and pedestrians. We establish an object detection benchmark for TSBOW, highlighting challenges posed by occlusions and adverse weather. With its varied road types, scales, and viewpoints, TSBOW serves as a critical resource for advancing Intelligent Transportation Systems. Our findings underscore the potential of CCTV-based traffic monitoring, paving the way for new research and applications.
+            </p>
+            <hr>
+
+            <div class="w3-center">
+                <!-- <h2>Videos</h2> -->
+                <div style="width: 100%; display: inline-block;">
+                    <video controls style="width:100%" autoplay loop playsinline muted>
+                        <source src="videos/road_conversion.mp4" type="video/mp4">
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
+                </div>
+                <br>
+                <div style="width: 100%; display: inline-block;">
+                    <video controls style="width:100%" autoplay loop playsinline muted>
+                        <source src="videos/specialcases_disaster_conversion.mp4" type="video/mp4">
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
+                </div>
+            </div>
+
+
+            <hr>
+            <!-- <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+              <embed src="images/fig_demo.jpg" style="width:100%">
+
+            </div>
+
+            <hr>
+            <div class="w3-center">
+              <h2>Architecture Overview</h2> -->
+        </div>
+        <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+            <embed src="images/Figure_Pipelines.png" style="width:100%">
+
+        </div>
+        <!-- <div class="w3-center">
+              <h2>Abstract</h2>
+          </div> -->
+        <p align="justify">
+            This study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive, semi-automatically annotated traffic surveillance dataset designed to improve monitoring system training, particularly under extreme weather conditions such as heavy haze and snow. Collected across all seasons and diverse road scenarios, TSBOW comprises 32 hours of footage from 198 videos, encompassing a variety of road types and scales, and providing multiple viewing angles for vehicles and pedestrians. The dataset includes over 3.2 million frames, each annotated with weather conditions and scenarios, alongside detailed object annotations derived from extracted images. Capturing complex, high-density scenes of vehicles and pedestrians in crowded urban settings, TSBOW features approximately 71.1 million bounding boxes across eight distinct traffic participant classes. As a robust resource for traffic surveillance research, TSBOW offers substantial potential to deepen insights into traffic dynamics and support advancements in intelligent transportation systems. The initial version focuses on daytime traffic flow under varying weather conditions. Future versions will include ground truth annotations for nighttime scenarios and additional computer vision tasks, such as multi-object tracking, semantic segmentation, vehicle counting, and speed estimation, to further enhance its utility.
+        </p>
+
+        <hr>
+        <hr>
+
+        <div class="w3-center">
+            <h2>Experiments</h2>
+            <p align="justify">
+                Updating
+        </div>
+        <h3>Static scenes</h3>
+        <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+            <embed src="images/Figure_All_Scenes.png" style="width:100%">
+        </div>
+
+        <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+            <embed src="images/Figure_All_Scenes.png" style="width:98%">
+        </div>
+
+        <div class="w3-center">
+            <!-- <h2>Videos</h2> -->
+            <div style="width: 49.5%; display: inline-block;">
+                <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                    <embed src="images/Figure_All_Scenes.png" style="width:95%">
+                </div>
+            </div>
+            <div style="width: 49.5%; display: inline-block;">
+                <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                    <embed src="images/Figure_All_Scenes.png" style="width:95%">
+                </div>
+            </div>
+        </div>
+
+        <h3>Dynamic scenes</h3>
+
+        <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+            <embed src="images/..png" style="width:100%">
+        </div>
+
+        <div class="w3-center">
+            <!-- <h2>Videos</h2> -->
+            <div style="width: 49.5%; display: inline-block;">
+                <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                    <embed src="images/Figure_All_Scenes.png" style="width:95%">
+                </div>
+            </div>
+            <div style="width: 49.5%; display: inline-block;">
+                <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                    <embed src="images/Figure_All_Scenes.png" style="width:95%">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <hr>
+    <div class="w3-center">
+        <h2>Bibtex</h2>
+    </div>
+    <textarea class="bibtexsection" readonly>
+@article{Ngoc_AAAI_2026,
+  title={TSBOW – Traffic Surveillance Benchmark for Occluded Vehicles Under VariousWeather Conditions},
+  author={Updating},
+  journal={AAAI 2026},
+  year={2025}
+}
+    </textarea>
+
+    <hr>
+    <div class="w3-center">
+        <p class="text-justify">
+            ...
+        </p>
+    </div>
+</div>
+<!-- end paper container -->
+
+</div><!-- End Grid -->
+</div><!-- End Page Container -->
 
 </body>
 <script defer src="https://unpkg.com/img-comparison-slider@7/dist/index.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@7/dist/styles.css" />
+<link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@7/dist/styles.css"/>
 
 </html>
