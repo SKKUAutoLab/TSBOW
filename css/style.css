@@ -127,7 +127,7 @@ summary {
   width: 20px;  
   height: 20px;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* optional if icon is too dark */
+  filter: none; /*brightness(0) invert(1) : optional if icon is too dark */
 }
 
 .btn span {
