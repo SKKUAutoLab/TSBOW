@@ -89,3 +89,47 @@ summary {
   font-weight: bold;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+/* Button URL */
+.resources {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1); /* makes dark icons white for dark background */
+}
+
+.btn:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}

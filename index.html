@@ -120,7 +120,7 @@
                 <div class="w3-display-container w3-row w3-white w3-margin-bottom">
                     
                     <div class="w3-center" style="display: flex; align-items: center; justify-content: center;">
-                        <img src="images/TSBOW_icon_white_BG.png" alt="TSBOW Logo" style="height:80px; margin-right:10px;">
+                        <img src="icons/" alt="TSBOW Logo" style="height:80px; margin-right:10px;">
                         <h1 style="margin:0; font-size:80px; line-height:1; position: relative; top:16px;">TSBOW</h1>
                     </div>
 
@@ -128,12 +128,26 @@
                         <h1><b>Traffic Surveillance Benchmark for Occluded Vehicles Under Various Weather Conditions</b></h1>
                         
                         <!-- dataset's urls -->
-                        <div class="w3-center">
+                        <div class="w3-center resources">
                             <h3><b>AAAI 2026</b></h3>
-                            <h4>[<a href="."><b>Paper</b></a>] 
+                            <!-- <h4>[<a href="."><b>Paper</b></a>] 
                                 [<a href="https://huggingface.co/datasets/skku-autolab/TSBOW/tree/main"><b>Huggingface Dataset</b></a>] 
                                 [<a href="https://github.com/SKKUAutoLab/TSBOW/"><b>Github</b></a>]
-                            </h4>
+                            </h4> -->
+                            <div class="button-group">
+                                <a href="." class="btn">
+                                    <img src="icons/AAAI.jpg" alt="Paper" />
+                                    <span>Paper</span>
+                                </a>
+                                <a href="https://huggingface.co/datasets/skku-autolab/TSBOW/tree/main" class="btn">
+                                    <img src="icons/huggingface.png" alt="Huggingface" />
+                                    <span>Hugging Face Dataset</span>
+                                </a>
+                                <a href="https://github.com/SKKUAutoLab/TSBOW/" class="btn">
+                                    <img src="icons/github.png" alt="GitHub" />
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
                         </div>
                         
                         <!-- authors list -->
@@ -172,11 +186,12 @@
                     <!-- Overview -->
                     <div class="w3-center">
                         <h1><b>Overview</b></h1>
+                        
                         <!-- Dataset Stats -->
                         <div class="stats">
                             <div class="stat">
                                 <h2>198</h2>
-                                <p>Videos Processed</p>
+                                <p>Processed Videos</p>
                             </div>
                             <div class="stat">
                                 <h2>32h</h2>
@@ -184,21 +199,23 @@
                             </div>
                             <div class="stat">
                                 <h2>3.2M</h2>
-                                <p>Frames</p>
+                                <p>Total Frames</p>
                             </div>
                             <div class="stat">
                                 <h2>71.1M</h2>
-                                <p>Semi-labeled BBoxes</p>
+                                <p>Semi-Annotated Objects</p>
                             </div>
                             <div class="stat">
                                 <h2>48K</h2>
-                                <p>Images Annotated Manually</p>
+                                <p>Manual-Annotated Images</p>
                             </div>
                             <div class="stat">
                                 <h2>1.1M</h2>
-                                <p>Objects Annotated Manually</p>
+                                <p>Manual-Annotated Objects</p>
                             </div>
                         </div>
+                        <!-- End of Dataset Stats -->
+
                         <div style="width: 100%; display: inline-block;">
                             <video controls style="width:100%" autoplay loop playsinline muted>
                                 <source src="videos/road_intersection_conversion.mp4" type="video/mp4">
@@ -221,12 +238,9 @@
                         <h2>Abstract</h2>
                     </div>
                     <details>
-                        <summary>Global warming has intensified the frequency and severity of extreme weather events, which degrade CCTV signal and video quality while disrupting traffic flow, thereby increasing traffic accident rates. Existing datasets, often limited to light haze, rain, and snow, fail to capture extreme weather conditions. To address this gap, this study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive dataset designed to enhance occluded vehicle detection across diverse annual weather scenarios. Comprising over 32 hours of real-world traffic data from densely populated urban areas, TSBOW includes more than 48,000 manually annotated bounding boxes and 3.2 million semi-labeled boxes, spanning eight traffic participant classes, ranging from large vehicles to micromobility devices and pedestrians. We establish an object detection benchmark for TSBOW, highlighting challenges posed by occlusions and adverse weather. With its varied road types, scales, and viewpoints, TSBOW serves as a critical resource for advancing Intelligent Transportation Systems. Our findings underscore the potential of CCTV-based traffic monitoring, paving the way for new research and applications.</summary>
-                        Hidden content.
-                    </details>
-                    <!-- <p align="justify">
+                        <summary>Show more</summary>
                         Global warming has intensified the frequency and severity of extreme weather events, which degrade CCTV signal and video quality while disrupting traffic flow, thereby increasing traffic accident rates. Existing datasets, often limited to light haze, rain, and snow, fail to capture extreme weather conditions. To address this gap, this study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive dataset designed to enhance occluded vehicle detection across diverse annual weather scenarios. Comprising over 32 hours of real-world traffic data from densely populated urban areas, TSBOW includes more than 48,000 manually annotated bounding boxes and 3.2 million semi-labeled boxes, spanning eight traffic participant classes, ranging from large vehicles to micromobility devices and pedestrians. We establish an object detection benchmark for TSBOW, highlighting challenges posed by occlusions and adverse weather. With its varied road types, scales, and viewpoints, TSBOW serves as a critical resource for advancing Intelligent Transportation Systems. Our findings underscore the potential of CCTV-based traffic monitoring, paving the way for new research and applications.
-                    </p> -->
+                    </details>
 
                     <hr>
 
@@ -265,9 +279,9 @@
                     <!-- <div class="w3-center">
                         <h2>Abstract</h2>
                     </div> -->
-                    <p align="justify">
-                        This study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive, semi-automatically annotated traffic surveillance dataset designed to improve monitoring system training, particularly under extreme weather conditions such as heavy haze and snow. Collected across all seasons and diverse road scenarios, TSBOW comprises 32 hours of footage from 198 videos, encompassing a variety of road types and scales, and providing multiple viewing angles for vehicles and pedestrians. The dataset includes over 3.2 million frames, each annotated with weather conditions and scenarios, alongside detailed object annotations derived from extracted images. Capturing complex, high-density scenes of vehicles and pedestrians in crowded urban settings, TSBOW features approximately 71.1 million bounding boxes across eight distinct traffic participant classes. As a robust resource for traffic surveillance research, TSBOW offers substantial potential to deepen insights into traffic dynamics and support advancements in intelligent transportation systems. The initial version focuses on daytime traffic flow under varying weather conditions. Future versions will include ground truth annotations for nighttime scenarios and additional computer vision tasks, such as multi-object tracking, semantic segmentation, vehicle counting, and speed estimation, to further enhance its utility.
-                    </p>
+                    <!-- <p align="justify">
+                        This .
+                    </p> -->
 
                     <hr>
                     <hr>
