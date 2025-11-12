@@ -133,6 +133,7 @@ summary {
 
 .btn span {
   font-size: 16px;
+  margin-top: 5px;
 }
 
 .btn:hover {
