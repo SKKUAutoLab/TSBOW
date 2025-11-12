@@ -124,10 +124,10 @@ summary {
 }
 
 .btn img {
-  width: 24px;    /* 👈 change this to resize the icons */
-  height: 24px;   /* keep proportional scaling */
+  width: 20px;  
+  height: 20px;
   object-fit: contain;
-  border-radius: 4px; /* optional: soft rounded corners for icons */
+  filter: brightness(0) invert(1); /* optional if icon is too dark */
 }
 
 .btn span {
