@@ -114,7 +114,7 @@ summary {
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #007acc;
+  background-color: #1292e7;
   color: white;
   text-decoration: none;
   padding: 10px 18px;
@@ -124,9 +124,10 @@ summary {
 }
 
 .btn img {
-  width: 20px;  
-  height: 20px;
+  width: 27px;  
+  height: 27px;
   object-fit: contain;
+  border-radius: 4px;
   filter: none; /*brightness(0) invert(1) : optional if icon is too dark */
 }
 
