@@ -39,3 +39,103 @@ select {
 input {
   width: 180px;
 }
+
+
+/* Overview --- Statistics */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.stat h2 {
+  grid-row: 1;
+  font-size: 50px;          
+  line-height: 1;
+  position: relative;
+  top: 1px;                /* pushes text down slightly */
+  margin: 0;
+  font-weight: 650;
+}
+
+.stat p {
+  grid-row: 2;
+  margin: 0;
+  font-size: 1em;
+  color: #555;
+  font-weight: bold;
+}
+
+.stat:nth-child(1) { grid-column: 1; }
+.stat:nth-child(2) { grid-column: 2; }
+.stat:nth-child(3) { grid-column: 3; }
+.stat:nth-child(4) { grid-column: 4; }
+.stat:nth-child(5) { grid-column: 5; }
+.stat:nth-child(6) { grid-column: 6; }
+
+
+/* Abstract */
+
+details {
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Button URL */
+.resources {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1292e7;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn img {
+  width: 27px;  
+  height: 27px;
+  object-fit: contain;
+  border-radius: 4px;
+  filter: none; /*brightness(0) invert(1) : optional if icon is too dark */
+}
+
+.btn span {
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
