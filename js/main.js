@@ -6,9 +6,8 @@ let prevScrollPos = window.scrollY;
 window.addEventListener("scroll", () => {
 const currentScrollPos = window.scrollY;
 
-if (currentScrollPos > 150) 
+if (currentScrollPos > 160) // 👈 only start showing after 160px down
 { 
-    // 👈 only start showing after 150px down
     if (prevScrollPos > currentScrollPos) 
         {
     header.style.top = "0";       // show when scrolling up
