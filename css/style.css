@@ -147,19 +147,19 @@ summary {
 
 body {
   margin: 0;
-  font-size: 16px;
+  font-size: 27px;
   /* font-family: Arial, sans-serif; */
 }
 
 /* Hidden by default */
 #scrollHeader {
   position: fixed;
-  top: -90px;  /* 👈 start hidden above page */
+  top: -99px;  /* 👈 start hidden above page */
   left: 0;
   width: 100%;
-  background-color: #007acc;
+  background-color: #000080;
   color: white;
-  padding: 10px 30px;
+  padding: 10px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -175,9 +175,28 @@ body {
   font-weight: bold;
 }
 
+#scrollHeader h1 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: bold;
+}
+
 #scrollHeader nav a:hover {
   opacity: 0.8;
-  color: rgb(255, 251, 0);
+  font-size: 35px;
+  color: rgb(255, 255, 0);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left .logo {
+  width: 40px;        /* ✅ resize icon */
+  height: 40px;
+  margin-right: 10px; /* space between icon and text */
+  object-fit: contain; /* keep aspect ratio */
 }
 
 
@@ -199,7 +218,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #1292e7;
+  background-color: #000080 ;
   color: white;
   text-decoration: none;
   padding: 10px 18px;
@@ -222,6 +241,17 @@ body {
 }
 
 .btn:hover {
-  background-color: #005fa3;
+  background-color: #1292e7;
   transform: translateY(-2px);
+}
+
+/* MARK: Mobile Ver */
+@media (max-width: 600px) {
+  #scrollHeader h1 {
+    font-size: 18px;
+  }
+  .header-left .logo {
+    width: 30px;
+    height: 30px;
+  }
 }
