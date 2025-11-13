@@ -145,9 +145,15 @@ summary {
 
 /* MARK: Scroll Header */
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Hidden by default */
 #scrollHeader {
   position: fixed;
-  top: 0;
+  top: -80px;  /* 👈 start hidden above page */
   left: 0;
   width: 100%;
   background-color: #007acc;
@@ -156,7 +162,7 @@ summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: top 0.3s;
+  transition: top 0.4s ease;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
