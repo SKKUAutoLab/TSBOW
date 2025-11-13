@@ -177,13 +177,12 @@ body {
 
 #scrollHeader h1 {
   margin: 0;
-  font-size: 27px;
+  font-size: 35px;
   font-weight: bold;
 }
 
 #scrollHeader nav a:hover {
   opacity: 0.8;
-  font-size: 35px;
   color: rgb(255, 255, 0);
 }
 
@@ -193,8 +192,8 @@ body {
 }
 
 .header-left .logo {
-  width: 40px;        /* ✅ resize icon */
-  height: 40px;
+  width: 10px;        /* ✅ resize icon */
+  height: 10px;
   margin-right: 10px; /* space between icon and text */
   object-fit: contain; /* keep aspect ratio */
 }
