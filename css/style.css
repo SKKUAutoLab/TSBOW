@@ -237,7 +237,7 @@ body {
 #scrollHeader nav a {
   color: white;
   text-decoration: none;
-  margin-left: 25px;
+  margin-left: 27px;
   font-weight: bold;
   top: 10px;
 }
@@ -246,7 +246,7 @@ body {
   margin: 0;
   font-size: 35px;
   font-weight: bold;
-  top: 16px;
+  top: 23px;
 }
 
 #scrollHeader nav a:hover {
