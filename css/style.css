@@ -225,6 +225,7 @@ body {
   left: 0;
   width: 100%;
   background-color: #000080;
+  opacity: 0.8;
   color: white;
   padding: 10px 30px;
   display: flex;
@@ -264,7 +265,7 @@ body {
 .header-left .logo {
   width: 45px;        /* ✅ resize icon */
   height: 45px;
-  top: -15px;
+  top: -25px;
   margin-right: 10px; /* space between icon and text */
   object-fit: contain; /* keep aspect ratio */
 }
