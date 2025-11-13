@@ -159,8 +159,8 @@ summary {
 
 .bibtex-box {
   position: relative;
-  background-color: #1e1e1e;
-  color: #eaeaea;
+  background-color: #cccccc;
+  color: #000000;
   border-radius: 10px;
   padding: 20px 30px;
   margin: 30px auto;
