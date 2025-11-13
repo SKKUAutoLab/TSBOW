@@ -225,7 +225,7 @@ body {
   left: 0;
   width: 100%;
   background-color: #000080;
-  opacity: 0.9;
+  opacity: 0.95;
   color: white;
   padding: 10px 30px;
   display: flex;
@@ -253,7 +253,7 @@ body {
 }
 
 #scrollHeader nav a:hover {
-  opacity: 0.8;
+  /* opacity: 0.8; */
   color: rgb(255, 255, 0);
   text-decoration: underline;
 }
