@@ -225,7 +225,7 @@ body {
   left: 0;
   width: 100%;
   background-color: #000080;
-  opacity: 0.8;
+  opacity: 0.9;
   color: white;
   padding: 10px 30px;
   display: flex;
@@ -241,14 +241,14 @@ body {
   text-decoration: none;
   margin-left: 30px;
   font-weight: bold;
-  top: 10px;
+  /* top: 10px; */
 }
 
 #scrollHeader h1 {
   margin: 0;
   font-size: 35px;
   font-weight: bold;
-  top: 23px;
+  /* top: 23px; */
 }
 
 #scrollHeader nav a:hover {
