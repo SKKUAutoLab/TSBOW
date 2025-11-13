@@ -270,7 +270,11 @@ body {
 }
 
 
-/* MARK: Button URL */
+/* MARK: Title */
+.uuc {
+  text-decoration: underline;
+}
+
 .resources {
   text-align: center;
   margin-top: 30px;

@@ -1,6 +1,11 @@
 base_url = "https://huggingface.co/datasets/skku-autolab/TSBOW"
 
 
+// title
+const title = document.getElementById("titleText");
+title.innerHTML = title.textContent.replace(/([A-Z])/g, '<span class="uuc">$1</span>');
+
+
 // scroll header
 const header = document.getElementById("scrollHeader");
 let prevScrollPos = window.scrollY;
