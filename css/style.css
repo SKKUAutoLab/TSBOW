@@ -249,7 +249,7 @@ body {
 #scrollHeader nav a {
   color: white;
   text-decoration: none;
-  margin-left: 27px;
+  margin-left: 30px;
   font-weight: bold;
   top: 10px;
 }
@@ -275,7 +275,7 @@ body {
 .header-left .logo {
   width: 45px;        /* ✅ resize icon */
   height: 45px;
-  top: -7px;
+  top: -11px;
   margin-right: 10px; /* space between icon and text */
   object-fit: contain; /* keep aspect ratio */
 }
