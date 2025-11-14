@@ -338,7 +338,7 @@ body {
 
 #tsbow-title span:hover {
     color: #0000db;       /* highlight color */
-    transform: scale(1.2) translateY(-5px);
+    transform: scale(1.2);
     /* opacity: 0.9; */
 }
 
