@@ -19,6 +19,18 @@ title.innerHTML = ""; // clear original
 // title.innerHTML = title.textContent.replace(/([A-Z])/g, '<span class="uuc">$1</span>');
 
 
+// header - scroll to top on logo/TSBOW click
+const headerLeft = document.querySelector(".header-left");
+if (headerLeft) {
+    headerLeft.style.cursor = "pointer";
+    headerLeft.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+
 // header
 const header = document.getElementById("scrollHeader");
 let prevScrollPos = window.scrollY;

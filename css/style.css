@@ -265,12 +265,6 @@ body {
   /* top: 10px; */
 }
 
-#scrollHeader h1 {
-  margin: 0;
-  font-size: 45px;
-  font-weight: bold;
-  /* top: 23px; */
-}
 
 #scrollHeader nav a:hover {
   /* opacity: 0.8; */
@@ -281,17 +275,32 @@ body {
 .header-left {
   display: flex;
   align-items: center;
-  top: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.header-left:hover {
+  opacity: 0.95;
+  color: #d3d3f3;
 }
 
 .header-left .logo {
-  width: 45px;        /* ✅ resize icon */
+  /* width: 45px; */
   height: 45px;
-  top: -25px;
   margin-right: 10px; /* space between icon and text */
   object-fit: contain; /* keep aspect ratio */
 }
 
+.header-left .title {
+  margin: 11px;
+  /* padding: 0; */
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
 
 
 /* MARK: Footer */
