@@ -1,7 +1,9 @@
+<!-- HELLO WORLD!!! -->
+
 <!DOCTYPE html>
+
 <html lang="en">
     
-
     <head>
         <title>TSBOW</title>
         <meta charset="UTF-8">
@@ -113,7 +115,7 @@
     </head>
 
     <body class="w3-white" style="top:15px;">
-        <!-- MARK: header -->
+        <!-- MARK: Header -->
         <header id="scrollHeader">
             <div class="header-left">
                 <img src="icons/TSBOW_icon_white_border.png" alt="TSBOW Logo" class="logo">
@@ -131,7 +133,7 @@
                 <!-- <a href="#acknowledgement">Acknowledgement</a> -->
             </nav>
         </header>
-        <!-- End of header -->
+        <!-- End of Header -->
 
         <!-- Page Container -->
         <div class="w3-content w3-margin-top w3-margin-bottom" style="max-width:960px;">
@@ -415,18 +417,21 @@
                         </div>
 
                         <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
-                            <embed src="images/Table_6.png" style="width:75%">
-                            <p class="caption-figtab">
-                                Model performances after training 100 epochs and validating with imgsz=1280 on manually labeled test set.
-                            </p>
-                        </div>
-
-                        <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
                             <embed src="images/Supp_Models_Performances.png" style="width:95%">
                             <p class="caption-figtab">
                                 Model performances under different weather conditions
                             </p>
-                        </div>                        
+                        </div>
+
+                        <details class="datasets-comparison-details">
+                            <summary>Validation Models</summary>
+                            <div class="w3-display-container w3-row w3-white w3-margin-bottom w3-center">
+                                <embed src="images/Table_6.png" style="width:75%">
+                                <p class="caption-figtab">
+                                    Model performances after training 100 epochs and validating with imgsz=1280 on manually labeled test set.
+                                </p>
+                            </div>
+                        </details>
 
                         <div class="w3-center">
                             <div class="section-header">
@@ -527,7 +532,7 @@
                             <pre><code>
 @article{Huynh_TSBOW_AAAI_2026,
     title   = {TSBOW: Traffic Surveillance Benchmark for Occluded Vehicles Under Various Weather Conditions},
-    author  = {Ngoc Huynh, Duong Tran, Long Pham, Tai Tran, Hung Nguyen, Trinh Le, Chi Tran, Duong Vu, Son Phan, Quoc Ho, Min Jeon, Joon Jeon, JaeWook Jeon},
+    author  = {Ngoc Doan-Minh Huynh, Duong Nguyen-Ngoc Tran, Long Hoang Pham, Tai Huu-Phuong Tran, Huy-Hung Nguyen, Trinh Le Ba Khanh, Chi Dai Tran, Duong Khac Vu, Son Hong Phan, Quoc Pham-Nam Ho, Hyung-Min Jeon, Hyung-Joon Jeon, Jae Wook Jeon},
     journal = {AAAI 2026},
     year    = {2025}
 }
@@ -543,7 +548,7 @@
                             <h2>Acknowledgement</h2>
                         </div>
                         <p class="para-bi-margin">
-                            This work was supported by the Institute of Information & communications Technology Planning & Evaluation(IITP) grant funded by the Korea government(MSIT) (No. 2021-0-01364, An intelligent system for 24/7 real-time traffic surveillance on edge devices)
+                            This work was supported by the Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT) (No. 2021-0-01364, An intelligent system for 24/7 real-time traffic surveillance on edge devices)
                         </p>
                     </section>
                     <!-- End of Acknowledgement -->
@@ -557,6 +562,9 @@
         </div>
         <!-- End Page Container -->
 
+
+
+        <!-- MARK: Footer -->
         <footer class="footer">
             <div class="footer-content"></div>
                 <img src="icons/TSBOW_icon_white_border.png" class="footer-icon" alt="Left Icon">
@@ -572,6 +580,7 @@
                 <!-- <img src="icons/TSBOW_icon_white_border.png" class="footer-icon" alt="Right Icon"> -->
             </div>
         </footer>
+        <!-- End of Footer -->
 
     </body>
 
