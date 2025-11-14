@@ -286,7 +286,20 @@ body {
   font-weight: bold;
 
   /* opacity: 0; */
-  transition: opacity 0.8s ease;
+  /* transition: opacity 0.8s ease; */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* space between elements */
+}
+
+.footer-icon {
+  width: 60px;   /* adjust size */
+  height: auto;
+  opacity: 0.9;
 }
 
 .footer .ascii {
