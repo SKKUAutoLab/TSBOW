@@ -2,6 +2,19 @@ base_url = "https://huggingface.co/datasets/skku-autolab/TSBOW"
 
 
 // title
+///// TSBOW
+const title = document.getElementById("tsbow-title");
+const text = title.textContent.trim();
+
+title.innerHTML = ""; // clear original
+
+[...text].forEach(char => {
+    const span = document.createElement("span");
+    span.textContent = char;
+    title.appendChild(span);
+});
+
+///// Traffic Surveillance Benchmark for Occluded vehicles under various Weather conditions
 const title = document.getElementById("titleText");
 title.innerHTML = title.textContent.replace(/([A-Z])/g, '<span class="uuc">$1</span>');
 
