@@ -281,13 +281,18 @@ body {
   background: #000080;
   color: #fff;
   text-align: center;
+  margin-top: 60px;
   font-size: 14px;
 
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity 0.8s ease;
 }
-.footer.visible {
-  opacity: 1;
+
+.footer .ascii {
+  font-family: monospace;
+  font-size: 12px;
+  margin: 0;
+  white-space: pre;
 }
 
 
