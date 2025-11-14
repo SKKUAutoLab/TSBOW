@@ -285,7 +285,7 @@ summary {
   position: absolute;
   top: 20px;
   right: 25px;
-  background: #007acc;
+  background: #2d2dc9;
   color: white;
   border: none;
   border-radius: 6px;
@@ -296,7 +296,7 @@ summary {
 }
 
 .copy-btn:hover {
-  background: #005fa3;
+  background: #6f6fff;
 }
 
 
