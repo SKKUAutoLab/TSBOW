@@ -321,14 +321,19 @@ body {
 
 /* -- TSBOW -- */
 #tsbow-title span {
-    display: inline-block;
-    transition: 0.15s ease;
+    display: inline;
+    transition: 
+      color 0.25s ease-out,
+      transform  0.25s ease-out,
+      opacity 0.25s ease;
     cursor: default;
+    /* margin-right: -2px;  */
 }
 
 #tsbow-title span:hover {
     color: #0000db;       /* highlight color */
-    transform: scale(1.15);
+    transform: scale(1.15) translateY(-3px);
+    opacity: 0.9;
 }
 
 /* -- Traffic Surveillance... */
