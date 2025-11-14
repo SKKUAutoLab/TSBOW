@@ -339,6 +339,7 @@ body {
 /* -- Traffic Surveillance... */
 .uuc {
   text-decoration: underline;
+  color: #000080;
 }
 
 .resources {
