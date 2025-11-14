@@ -272,6 +272,7 @@ body {
 .header-left {
   display: flex;
   align-items: center;
+  top: 10px;
 }
 
 .header-left .logo {
