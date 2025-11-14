@@ -46,11 +46,15 @@ input {
   color: #000080;  /* navy color */
   font-weight: bold;
   margin-top: 50px;
+
+  scroll-margin-top: 60px;
 }
 
 .section-header h2 {
   color: #000080;  /* navy color */
   font-weight: bold;
+
+  scroll-margin-top: 60px;
 }
 
 
