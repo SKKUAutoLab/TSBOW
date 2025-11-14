@@ -404,3 +404,10 @@ body {
     height: 30px;
   }
 } */
+
+/* Video spacing */
+.video-container {
+  margin-top: 30px;
+  width: 100%; 
+  display: inline-block;
+}
