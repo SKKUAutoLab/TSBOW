@@ -89,6 +89,32 @@ section::before {
   margin-top: 9px;
 }
 
+/* Video spacing */
+.video-container {
+  margin-top: 30px;
+  width: 100%; 
+  display: inline-block;
+}
+
+/* Image hover effects */
+img {
+  transition: all 0.3s ease;
+}
+
+embed {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.w3-display-container img:hover,
+.w3-display-container embed:hover,
+embed:hover {
+  border-color: #000080;
+  box-shadow: 0 4px 12px rgba(0, 0, 128, 0.15);
+  transform: translateY(-3px);
+  border-radius: 8px;
+}
+
 
 /* MARK: Overview --- Statistics */
 .stats {
@@ -166,6 +192,51 @@ summary {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+
+/* MARK: Download */
+
+.download-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.download-item {
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.download-item:hover {
+  border-color: #000080;
+  box-shadow: 0 4px 12px rgba(0, 0, 128, 0.15);
+  transform: translateY(-2px);
+}
+
+.download-item h3 {
+  color: #000080;
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+.download-desc {
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 0 0 20px 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 
 /* MARK: Citation */
@@ -428,9 +499,4 @@ body {
   }
 } */
 
-/* Video spacing */
-.video-container {
-  margin-top: 30px;
-  width: 100%; 
-  display: inline-block;
-}
+
