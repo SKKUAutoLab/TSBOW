@@ -44,7 +44,7 @@
     <br>
     <a href="https://aaai.org/conference/aaai/aaai-26/">Paper</a>  &emsp;&emsp;
     <a href="https://huggingface.co/datasets/skku-autolab/TSBOW/tree/main">Hugging Face Dataset</a>  &emsp;&emsp;
-    <a href="https://github.com/SKKUAutoLab/TSBOW/">Github</a>  
+    <a href="https://skkuautolab.github.io/TSBOW/">Website</a>  
 </div>
 
 (UPDATING....) 
@@ -74,3 +74,4 @@ Scenes from the TSBOW dataset, comprising 198 videos recorded across four distin
 
 ## Citation
 
+## Acknowledgement
