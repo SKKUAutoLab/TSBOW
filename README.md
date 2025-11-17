@@ -12,22 +12,22 @@
     <a href="https://scholar.google.com/citations?user=crRQGUAAAAAJ">
         Duong Nguyen-Ngoc Tran</a>  &emsp;
     <a href="https://scholar.google.com/citations?user=xPyle9AAAAAJ">
-        Long Hoang Pham</a>     &emsp;
-    Tai Huu-Phuong Tran
+        Long Hoang Pham</a>     
 </div>
 
 <div align='center'>
-    Huy-Hung Nguyen     &emsp;
-    Trinh Le Ba Khanh   &emsp;
-    Chi Dai Tran        &emsp;
-    Duong Khac Vu       &emsp;
-    Son Hong Phan   
-</div>
-
-<div align='center'>
-    Quoc Pham-Nam Ho    &emsp;
-    Hyung-Min Jeon      &emsp; 
+    Tai Huu-Phuong Tran &emsp;
     Hyung-Joon Jeon     &emsp;
+    Huy-Hung Nguyen     &emsp;
+    Duong Khac Vu       &emsp;
+    Hyung-Min Jeon      
+</div>
+
+<div align='center'>
+    Son Hong Phan       &emsp; 
+    Quoc Pham-Nam Ho    &emsp;
+    Chi Dai Tran        &emsp;
+    Trinh Le Ba Khanh   &emsp;
     <a href="https://scholar.google.com/citations?user=9z0SfKoAAAAJ">
         Jae Wook Jeon</a>
 </div>
