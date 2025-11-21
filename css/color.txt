@@ -1,0 +1,7 @@
+navy		#000080
+neon green 	#33CCCC 
+neon blue 	#33CCFF 
+neon purple	#6699FF
+neon yellow	#FFCC00 
+neon orange	#FF6600 
+neon red	#FF0066
