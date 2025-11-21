@@ -459,7 +459,7 @@ body {
 .btn {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 11px;
   background-color:#1292e7;
   color: white;
   text-decoration: none;
@@ -470,11 +470,12 @@ body {
 }
 
 .btn img {
-  width: 27px;  
-  height: 27px;
+  width: 30px;  
+  height: 30px;
   object-fit: contain;
   border-radius: 4px;
   filter: none; /*brightness(0) invert(1) : optional if icon is too dark */
+  transform: translateY(-3px);
 }
 
 .btn span {
