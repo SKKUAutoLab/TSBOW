@@ -90,7 +90,8 @@ Global warming has intensified the frequency and severity of extreme weather eve
 ## Overview
 
 <div align="center" style="max-width:900px; margin: 10px auto 20px; border-radius: 8px;">
-    <img src="images/Github_StatsTable.png" alt="TSBOW Stats" style="width:80%; height:auto; display:block; border-radius:6px;">
+    <img src="images/Github_StatsTable_1x6.png" alt="TSBOW Stats" style="width:100%; height:auto; display:block; border-radius:6px;">
+    <p>Dataset Statistics</p>
 </div>
 
 <div align="center" style="max-width:900px; margin: 10px auto 20px; border-radius: 8px;">
