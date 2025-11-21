@@ -50,11 +50,11 @@
 <!-- https://github.com/simple-icons/simple-icons/blob/master/slugs.md  -->
 <br> 
 <div align="center">
-  <a href="https://skkuautolab.github.io/TSBOW/"><img src="https://img.shields.io/static/v1?label=TSBOW&message=Website&color=fa9f1b"></a>  
-  <a href="https://aaai.org/conference/aaai/aaai-26/"><img src="https://img.shields.io/static/v1?label=Main_Paper&message=AAAI&color=green"></a>  
-  <a href="https://aaai.org/conference/aaai/aaai-26/"><img src="https://img.shields.io/static/v1?label=Supplementary&message=arXiv&color=FF0066&logo=arxiv"></a>  
-  <a href="https://github.com/SKKUAutoLab/TSBOW"><img src="https://img.shields.io/static/v1?label=Code&message=Github&color=6699FF&logo=github"></a>   
-  <a href="https://huggingface.co/datasets/skku-autolab/TSBOW/tree/main"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=FF6600&logo=huggingface"></a>  
+  <a href="https://skkuautolab.github.io/TSBOW/"><img src="https://img.shields.io/static/v1?label=TSBOW&message=Website&color=fa9f1b" style="height: 25px;"></a>  
+  <a href="https://aaai.org/conference/aaai/aaai-26/"><img src="https://img.shields.io/static/v1?label=Main_Paper&message=AAAI&color=green" style="height: 25px;"></a>  
+  <a href="https://aaai.org/conference/aaai/aaai-26/"><img src="https://img.shields.io/static/v1?label=Supplementary&message=arXiv&color=FF0066&logo=arxiv" style="height: 25px;"></a>  
+  <a href="https://github.com/SKKUAutoLab/TSBOW"><img src="https://img.shields.io/static/v1?label=Code&message=Github&color=6699FF&logo=github" style="height: 25px;"></a>   
+  <a href="https://huggingface.co/datasets/skku-autolab/TSBOW/tree/main"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=FF6600&logo=huggingface" style="height: 25px;"></a>  
 </div>
 <br>
 
@@ -94,6 +94,8 @@ Global warming has intensified the frequency and severity of extreme weather eve
 
 We provide scripts to download the TSBOW dataset from HuggingFace. Please refer to the [`download_TSBOW.py`](utils/download_TSBOW.py) script for more details.
 
+**Contact for dataset**: {ngochdm, duongtran, phlong}@skku.edu
+
 
 ## References
 
@@ -119,3 +121,7 @@ Our repository is licensed under the **Apache 2.0 License**. However, if you use
 }
 ```
 
+
+<!-- ![Star History Chart](https://api.star-history.com/svg?repos=SKKUAutoLab/TSBOW&type=Date) -->
+
+<div align="center"><a href="#top">🔝 Back to Top</a></div>
