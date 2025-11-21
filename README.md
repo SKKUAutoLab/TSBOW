@@ -4,7 +4,7 @@
 </div> -->
 
 <h1 align='center'>
-    TSBOW – Traffic Surveillance Benchmark for Occluded Vehicles
+    TSBOW: Traffic Surveillance Benchmark for Occluded Vehicles
     Under Various Weather Conditions
 </h1>
 
@@ -89,37 +89,55 @@ Global warming has intensified the frequency and severity of extreme weather eve
 
 ## Overview
 
-<div align="center">
+<div align="center" style="max-width:900px; margin: 10px auto 20px; border-radius: 8px;">
+    <img src="images/Github_StatsTable.png" alt="TSBOW Stats" style="width:80%; height:auto; display:block; border-radius:6px;">
+</div>
+
+<div align="center" style="max-width:900px; margin: 10px auto 20px; border-radius: 8px;">
+    <img src="images/Figure_Suwon_Camera_Map.png" alt="TSBOW Stats" style="width:50%; height:auto; display:block; border-radius:6px;">
+    <p>Recording Locations</p>
+</div>
+
+<!-- Table 2x3 for github -->
+<!-- <div align="center">
     <table style="width: 100%; max-width: 800px; margin: 30px auto; border-collapse: collapse;">
-    <tr>
-        <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
-            <h2 style="margin: 0; font-size: 2.5em; color: #33CCCC; font-weight: bold;">198</h2>
-            <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #33CCCC; font-weight: bold;">📹 Processed Videos 📹</p>
-        </td>
-        <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
-            <h2 style="margin: 0; font-size: 2.5em; color: #FFCC00; font-weight: bold;">32 h</h2>
-            <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #FFCC00; font-weight: bold;">⏱️ Duration ⏱️</p>
-        </td>
-        <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
-            <h2 style="margin: 0; font-size: 2.5em; color: #6699FF; font-weight: bold;">3.2 M</h2>
-            <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #6699FF; font-weight: bold;">🖼️ Total Frames 🖼️</p>
-        </td>
-    </tr>
-    <tr>
-        <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
-            <h2 style="margin: 0; font-size: 2.5em; color: #FF6600; font-weight: bold;">71.1 M</h2>
-            <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #FF6600; font-weight: bold;">Semi-Annotated<br>Instances</p>
-        </td>
-        <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
-            <h2 style="margin: 0; font-size: 2.5em; color: #33CCFF; font-weight: bold;">48 K</h2>
-            <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #33CCFF; font-weight: bold;">Manual-Annotated<br>Frames</p>
-        </td>
-        <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
-            <h2 style="margin: 0; font-size: 2.5em; color: #FF0066; font-weight: bold;">1.1 M</h2>
-            <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #FF0066; font-weight: bold;">Manual-Anotated<br>Instances</p>
-        </td>
-    </tr>
+        <tr>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #33CCCC; font-weight: bold;">198</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #33CCCC; font-weight: bold;">📹 Processed Videos 📹</p>
+            </td>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #FFCC00; font-weight: bold;">32 h</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #FFCC00; font-weight: bold;">⏱️ Duration ⏱️</p>
+            </td>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #6699FF; font-weight: bold;">3.2 M</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #6699FF; font-weight: bold;">🖼️ Total Frames 🖼️</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #FF6600; font-weight: bold;">71.1 M</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #FF6600; font-weight: bold;">Semi-Annotated<br>Instances</p>
+            </td>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #33CCFF; font-weight: bold;">48 K</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #33CCFF; font-weight: bold;">Manual-Annotated<br>Frames</p>
+            </td>
+            <td style="padding: 25px 15px; text-align: center; border: 1px solid #ddd; background: #092030;">
+                <h2 style="margin: 0; font-size: 2.5em; color: #FF0066; font-weight: bold;">1.1 M</h2>
+                <p style="margin: 8px 0 0 0; font-size: 1.1em; color: #FF0066; font-weight: bold;">Manual-Anotated<br>Instances</p>
+            </td>
+        </tr>
     </table>
+</div> -->
+
+
+
+## Experiments
+
+<div align="center" style="background:#f4f7fb; padding:18px; border-radius:10px; max-width:1000px; margin: 16px auto;">
+    <img src="images/Supp_Models_Performances.png" alt="TSBOW Experiments" style="width:100%; height:auto; border-radius:6px; display:block;">
 </div>
 
 
@@ -153,6 +171,11 @@ Our repository is licensed under the **Apache 2.0 License**. However, if you use
 ```
 
 
-![Star History Chart](https://api.star-history.com/svg?repos=SKKUAutoLab/TSBOW&type=Date)
+<!-- ![Star History Chart](https://api.star-history.com/svg?repos=SKKUAutoLab/TSBOW&type=Date) -->
+
+<div style="position: relative; display: inline-block;">
+  <img src="https://api.star-history.com/svg?repos=SKKUAutoLab/TSBOW&type=Date" alt="Star History Graph">
+  <img src="icons/TSBOW_icon_white_BG.png" style="position: absolute; top: 10px; left: 310px; width: 30px; height: 30px;" alt="Custom Avatar">
+</div>
 
 <div align="center"><a href="#top">🔝 Back to Top</a></div>
