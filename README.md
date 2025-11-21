@@ -1,7 +1,11 @@
 <!-- title -->
+<!-- <div align='center'>
+    <img src="icons/TSBOW_icon_white_border.png" alt="TSBOW icon" width="50">
+</div> -->
+
 <h1 align='center'>
     TSBOW – Traffic Surveillance Benchmark for Occluded Vehicles
-    <br>Under Various Weather Conditions
+    Under Various Weather Conditions
 </h1>
 
 
@@ -58,11 +62,23 @@
 
 (All links would be updated on the conference day.)
 
-## Introduction
 
 ![TSBOW Dataset Scenes](images/Figure_All_Scenes.png)
 
-Scenes from the TSBOW dataset, comprising 198 videos recorded across four distinct scenarios spanning all seasons (sunny/cloudy, haze/fog, rain, snow) over a year. The dataset emphasizes adverse weather conditions and densely populated urban areas with heavy traffic, addressing significant challenges in image degradation and vehicle occlusion.
+
+## 🎉NEWS
+
+<!-- + [2026.01.20] 🎆 TSBOW dataset is available on HuggingFace. -->
+<!-- + [2025.12.31] 🔥 Our paper, code and TSBOW dataset are released! -->
++ [2025.11.11] 🔥 Our code and TSBOW website are released!
+
+## Abstract
+
+Global warming has intensified the frequency and severity of extreme weather events, which degrade CCTV signal and video quality while disrupting traffic flow, thereby increasing traffic accident rates. Existing datasets, often limited to light haze, rain, and snow, fail to capture extreme weather conditions. To address this gap, this study introduces the Traffic Surveillance Benchmark for Occluded Vehicles under Various Weather Conditions (TSBOW), a comprehensive dataset designed to enhance occluded vehicle detection across diverse annual weather scenarios. Comprising over 32 hours of real-world traffic data from densely populated urban areas, TSBOW includes more than 48,000 manually annotated bounding boxes and 3.2 million semi-labeled boxes, spanning eight traffic participant classes from large vehicles to micromobility devices and pedestrians. We establish an object detection benchmark for TSBOW, highlighting challenges posed by occlusions and adverse weather. With its varied road types, scales, and viewpoints, TSBOW serves as a critical resource for advancing Intelligent Transportation Systems. Our findings underscore the potential of CCTV-based traffic monitoring, paving the way for new research and applications. The TSBOW dataset is available at: {https://github.com/SKKUAutoLab/TSBOW}.
+
+## Introduction
+
+<!-- Scenes from the TSBOW dataset, comprising 198 videos recorded across four distinct scenarios spanning all seasons (sunny/cloudy, haze/fog, rain, snow) over a year. The dataset emphasizes adverse weather conditions and densely populated urban areas with heavy traffic, addressing significant challenges in image degradation and vehicle occlusion. -->
 
 <!-- <video src="videos/road_intersection_conversion.mp4" width="100%" controls></video>-->
 <div class="video-container">
