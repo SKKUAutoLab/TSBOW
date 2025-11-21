@@ -89,6 +89,8 @@ Global warming has intensified the frequency and severity of extreme weather eve
 
 ## Overview
 
+Please download our Github repo to get better view.
+
 <div align="center" style="max-width:900px; margin: 10px auto 20px; border-radius: 8px;">
     <img src="images/Github_StatsTable_1x6.png" alt="TSBOW Stats" style="width:100%; height:auto; display:block; border-radius:6px;">
     <p><b>Dataset Statistics</b></p>
@@ -212,6 +214,8 @@ Our repository is licensed under the **Apache 2.0 License**. However, if you use
 
 
 <!-- ![Star History Chart](https://api.star-history.com/svg?repos=SKKUAutoLab/TSBOW&type=Date) -->
+
+![](https://img.shields.io/github/downloads/SKKUAutoLab/TSBOW/total.svg?style=for-the-badge)
 
 <div style="position: relative; display: inline-block;">
   <img src="https://api.star-history.com/svg?repos=SKKUAutoLab/TSBOW&type=Date" alt="Star History Graph">
