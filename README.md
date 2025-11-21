@@ -42,6 +42,14 @@
     <a href="https://micro.skku.ac.kr/micro/index.do">Automation Lab</a>, Sungkyunkwan University
 </div>
 
+<br>
+
+<div align='center'>
+    <b>Corresponding Author</b>: jwjeon@skku.edu
+    <br>
+    <b>Contact for Dataset</b>: {ngochdm, duongtran, phlong}@skku.edu
+</div>
+
 
 <!-- MARK: URLs -->
 <!-- get img shields at: -->
@@ -93,8 +101,6 @@ Global warming has intensified the frequency and severity of extreme weather eve
 ## Dataset Download
 
 We provide scripts to download the TSBOW dataset from HuggingFace. Please refer to the [`download_TSBOW.py`](utils/download_TSBOW.py) script for more details.
-
-**Contact for dataset**: {ngochdm, duongtran, phlong}@skku.edu
 
 
 ## References
