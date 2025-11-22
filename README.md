@@ -257,7 +257,7 @@ Our repository is licensed under the **Apache 2.0 License**. However, if you use
 ```bibtex
 @article{Huynh_TSBOW_AAAI_2026,
     title   = {TSBOW: Traffic Surveillance Benchmark for Occluded Vehicles Under Various Weather Conditions},
-    author  = {Ngoc Doan-Minh Huynh, Duong Nguyen-Ngoc Tran, Long Hoang Pham, Tai Huu-Phuong Tran, Huy-Hung Nguyen, Trinh Le Ba Khanh, Chi Dai Tran, Duong Khac Vu, Son Hong Phan, Quoc Pham-Nam Ho, Hyung-Min Jeon, Hyung-Joon Jeon, Jae Wook Jeon},
+    author  = {Ngoc Doan-Minh Huynh, Duong Nguyen-Ngoc Tran, Long Hoang Pham, Tai Huu-Phuong Tran, Hyung-Joon Jeon, Huy-Hung Nguyen, Duong Khac Vu, Hyung-Min Jeon, Son Hong Phan, Quoc Pham-Nam Ho, Chi Dai Tran, Trinh Le Ba Khanh, Jae Wook Jeon},
     journal = {AAAI 2026},
     year    = {2025}
 }
