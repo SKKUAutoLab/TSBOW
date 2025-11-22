@@ -57,6 +57,7 @@
 <!-- check icon at: -->
 <!-- https://github.com/simple-icons/simple-icons/blob/master/slugs.md  -->
 <br> 
+
 <div align="center">
   <a href="https://skkuautolab.github.io/TSBOW/"><img src="https://img.shields.io/static/v1?label=TSBOW&message=Website&color=fa9f1b" style="height: 25px;"></a>  
   <a href="https://aaai.org/conference/aaai/aaai-26/"><img src="https://img.shields.io/static/v1?label=DOI_AAAI&message=updating&color=green" style="height: 25px;"></a>  
@@ -65,6 +66,7 @@
   <a href="https://github.com/SKKUAutoLab/TSBOW"><img src="https://img.shields.io/static/v1?label=Code&message=Github&color=6699FF&logo=github" style="height: 25px;"></a>   
   <a href="https://huggingface.co/datasets/skku-autolab/TSBOW/tree/main"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=FF6600&logo=huggingface" style="height: 25px;"></a>  
 </div>
+
 <br>
 
 (UPDATING....) 
