@@ -196,6 +196,9 @@ Global warming has intensified the frequency and severity of extreme weather eve
 
 <details>
     <summary>Comparison with other datasets</summary>
+<div align="center" style="background:#f4f7fb; padding:18px; border-radius:10px; max-width:1000px; margin: 16px auto;">
+    <img src="images/Table_1.png" alt="TSBOW Comparison" style="width:100%; height:auto; border-radius:6px; display:block;">
+</div>
 
 <div align="center" style="background:#f4f7fb; padding:18px; border-radius:10px; max-width:1000px; margin: 16px auto;">
     <img src="images/Supp_Comparison_Performances.png" alt="TSBOW Comparison" style="width:100%; height:auto; border-radius:6px; display:block;">
@@ -206,9 +209,7 @@ Global warming has intensified the frequency and severity of extreme weather eve
 <details>
     <summary>Tables</summary>
 
-<div align="center" style="background:#f4f7fb; padding:18px; border-radius:10px; max-width:1000px; margin: 16px auto;">
-    <img src="images/Table_1.png" alt="TSBOW Comparison" style="width:100%; height:auto; border-radius:6px; display:block;">
-</div>
+
 </details>
 
 
