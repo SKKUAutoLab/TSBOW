@@ -1,7 +1,18 @@
 navy		#000080
-neon green 	#33CCCC 
-neon blue 	#33CCFF 
-neon purple	#6699FF
-neon yellow	#FFCC00 
-neon orange	#FF6600 
-neon red	#FF0066
+
+Neon Palettes
+    neon green 	#33CCCC 
+    neon blue 	#33CCFF 
+    neon purple	#6699FF
+    neon yellow	#FFCC00 
+    neon orange	#FF6600 
+    neon red	#FF0066
+
+
+Navy Palettes (Ocean Depths)
+    deep navy       #001F3F
+    vibrant blue    #0074D9
+    light blue      #7FDBFF
+    light teal      #39CCCC
+    cool green      #3D9970
+    vibrant green   #2ECC40
