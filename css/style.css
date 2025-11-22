@@ -69,6 +69,7 @@ section::before {
 
 /* MARK: View */
 .para-bi-margin {
+  color: #001F3F;
   margin-left: 0px; /* 20px top/bottom, 40px left/right */
   margin-right: 0px;
   text-align: justify;
@@ -76,6 +77,7 @@ section::before {
 }
 
 .caption-bi-margin {
+  color: #001F3F;
   font-size: 16px;
   margin-left: 10px;
   margin-right: 10px;
