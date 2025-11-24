@@ -22,22 +22,41 @@
 
 // MARK: Title - Synchronize hover 
 document.addEventListener('DOMContentLoaded', function() {
-  const t1 = document.querySelector('#tsbow-title .sync-tsbowT');
-  const t2 = document.querySelector('#titleText .sync-tsbowT');
-  if (t1 && t2) {
+  const t1_T = document.querySelector('#tsbow-title .sync-tsbowT');
+  const t2_T = document.querySelector('#titleText .sync-tsbowT');
+  if (t1_T && t2_T) {
     function addHighlight() {
-      t1.classList.add('highlight');
-      t2.classList.add('highlight');
+      t1_T.classList.add('highlight');
+      t2_T.classList.add('highlight');
     }
     function removeHighlight() {
-      t1.classList.remove('highlight');
-      t2.classList.remove('highlight');
+      t1_T.classList.remove('highlight');
+      t2_T.classList.remove('highlight');
     }
-    t1.addEventListener('mouseenter', addHighlight);
-    t1.addEventListener('mouseleave', removeHighlight);
-    t2.addEventListener('mouseenter', addHighlight);
-    t2.addEventListener('mouseleave', removeHighlight);
+    t1_T.addEventListener('mouseenter', addHighlight);
+    t1_T.addEventListener('mouseleave', removeHighlight);
+    t2_T.addEventListener('mouseenter', addHighlight);
+    t2_T.addEventListener('mouseleave', removeHighlight);
   }
+
+  const t1_S = document.querySelector('#tsbow-title .sync-tsbowS');
+  const t2_S = document.querySelector('#titleText .sync-tsbowS');
+  if (t1_S && t2_S) {
+    function addHighlight() {
+      t1_S.classList.add('highlight');
+      t2_S.classList.add('highlight');
+    }
+    function removeHighlight() {
+      t1_S.classList.remove('highlight');
+      t2_S.classList.remove('highlight');
+    }
+    t1_S.addEventListener('mouseenter', addHighlight);
+    t1_S.addEventListener('mouseleave', removeHighlight);
+    t2_S.addEventListener('mouseenter', addHighlight);
+    t2_S.addEventListener('mouseleave', removeHighlight);
+  }
+  
+  
 });
 
 
