@@ -361,13 +361,13 @@ body {
 
 .header-left .logo {
   /* width: 45px; */
-  height: 35px;
+  height: 45px;
   margin-right: 10px; /* space between icon and text */
   object-fit: contain; /* keep aspect ratio */
 }
 
 .header-left .title {
-  margin: 11px;
+  margin: 20px;
   /* padding: 0; */
   font-size: 45px;
   font-weight: bold;
