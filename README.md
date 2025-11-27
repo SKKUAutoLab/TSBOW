@@ -119,7 +119,7 @@ Global warming has intensified the frequency and severity of extreme weather eve
 </div>
 
 <div align="center" style="max-width:900px; margin: 10px auto 20px; border-radius: 8px;">
-    <img src="images/Chart_TSBOW_ClassDist.png" alt="TSBOW Stats" style="width:100%; height:auto; display:block; border-radius:6px;">
+    <img src="images/Chart_TSBOW_ClassDist.png" alt="Class Dist" style="width:100%; height:auto; display:block; border-radius:6px;">
     <p><b>Class Distribution</b></p>
 </div>
 
