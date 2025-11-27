@@ -112,7 +112,7 @@ Global warming has intensified the frequency and severity of extreme weather eve
             <p style="margin:8px 0 0 0; font-weight:600;">Recording Locations</p>
         </div>
         <div style="flex:1 1 440px; max-width:44%; text-align:center;">
-            <img src="images/Chart_SunburstChart.png" alt="Video Distribution" style="width:100%; height:auto; display:block; border-radius:6px;">
+            <img src="images/Chart_SunburstChart_Attributes.png" alt="Video Distribution" style="width:100%; height:auto; display:block; border-radius:6px;">
             <p style="margin:8px 0 0 0; font-weight:600;">Video Distribution</p>
         </div>
     </div>
