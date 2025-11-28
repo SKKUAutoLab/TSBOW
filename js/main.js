@@ -154,7 +154,7 @@ if (currentScrollPos > 700) // 👈 only start showing after 700px down
 } 
 else 
 {
-    header.style.top = "-99px";     // stay hidden near the top
+    header.style.top = "-110px";     // stay hidden near the top
 }
 
 prevScrollPos = currentScrollPos;
