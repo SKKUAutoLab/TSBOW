@@ -2,6 +2,7 @@ Main Color
     navy		#000080
     white       #FFFFFF
 
+
 Neon Palettes
     neon green 	#33CCCC 
     neon blue 	#33CCFF 
@@ -9,6 +10,7 @@ Neon Palettes
     neon yellow	#FFCC00 
     neon orange	#FF6600 
     neon red	#FF0066
+
 
 Navy Palettes (Ocean Depths)
     deep navy       #001F3F
