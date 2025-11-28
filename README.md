@@ -85,7 +85,9 @@ Please download our Github repo to get better markdown view (i.e. Visual Code).
 
 <!-- + [2026.01.20] 🎆 TSBOW dataset is available on HuggingFace. -->
 <!-- + [2025.12.31] 🔥 Our paper, code and TSBOW dataset are released! -->
-+ [2025.11.11] 🔥 Our code and TSBOW website are released!
+
++ [2025.11.11] 🔥 Our code and website are released!
++ [2025.11.08] 🎉 TSBOW has been accepted to AAAI 2026!
 
 
 <!-- MARK: Abstract -->
